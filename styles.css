@@ -1,0 +1,284 @@
+/* Estilos Generales */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Contenedor Principal */
+
+.containerbanner {
+    width: 70%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+
+.collection-text h3 {
+    font-size: 1.5rem; /* Aumenta el tamaño del título */
+}
+
+.collection-text p {
+    font-size: 1.2rem; /* Aumenta el tamaño del párrafo */
+}
+
+.collection-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.collection-text, .collection-image {
+    flex: 1;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Alternar la disposición para la clase 'reverse' */
+.collection-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.collection-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Alternar la disposición */
+.collection-item:nth-child(odd) .collection-text {
+    order: 2; /* Texto a la derecha para las colecciones impares */
+}
+
+.collection-item:nth-child(even) .collection-text {
+    order: 1; /* Texto a la izquierda para las colecciones pares */
+}
+
+
+/* Para alternar el diseño en las siguientes colecciones */
+.collection-item:nth-child(even) .collection-text {
+    order: 1; /* Coloca el texto a la izquierda para colecciones alternas */
+}
+
+
+/* Encabezado */
+header {
+    background: #686b1c;
+    color: #ffffff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #e8491d 3px solid;
+}
+
+header a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header ul {
+    padding: 0;
+    list-style: none;
+}
+
+header ul li {
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header #branding {
+    float: left;
+}
+
+header #branding h1 {
+    margin: 0;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header .highlight, header .current a {
+    color: #e8491d;
+    font-weight: bold;
+}
+
+header a:hover {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Banner */
+.banner {
+    background: url('fotos/banner.jpg') no-repeat center center/cover;
+    color: #c3c473;
+    padding: 100px 0;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000000; /* Sombra negra con un poco de desenfoque */
+}
+
+.banner h1, .banner h2 {
+    font-size: 3rem;
+    margin-bottom: 0;
+}
+
+.banner p {
+    font-size: 1.3rem;
+}
+
+/* Colecciones */
+.collection {
+    background: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.collection h3 {
+    color: #333;
+    font-size: 2rem;
+}
+
+/* Textiles */
+#textiles {
+    background: #eaeaea;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Sobre Nosotros */
+#about-us {
+    background: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Formulario de Contacto */
+.contact {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-group textarea {
+    height: 150px;
+}
+
+.contact button[type="submit"] {
+    width: 100%;
+    padding: 10px 0;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact button[type="submit"]:hover {
+    background-color: #e8491d;
+}
+
+
+/* Pie de página */
+footer {
+    background: #35424a;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Media Queries */
+@media(max-width: 768px){
+    header #branding, header nav, header nav ul, header .current a, header .cta a {
+        text-align: center;
+        width: 100%;
+        padding: 20px;
+        float: none;
+    }
+    
+    header nav ul li, header .cta a {
+        border-bottom: none;
+    }
+
+    .banner h1, .banner h2 {
+        font-size: 2rem;
+    }
+
+    .banner p {
+        font-size: 1.1rem;
+    }
+}
+
+.contact-link {
+    font-weight: bold; /* Hace el texto en negrita */
+    color: #f4f4f4; /* Cambia el color del texto */
+    background-color: #e8491d; /* Añade un fondo (opcional) */
+    padding: 5px; /* Añade un poco de padding alrededor del texto (opcional) */
+    border-radius: 5px 5px 0 0; /* Redondea solo los bordes superiores */
+}
+
+.contact-link:hover {
+    background-color: #d67f67; /* Cambia el color de fondo al pasar el ratón por encima (hover) */
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.content-column {
+    flex: 1; /* Esto asigna un espacio igual a cada columna */
+    margin: 10px;
+    padding: 20px;
+    background-color: #f4f4f4; /* Color de fondo para cada columna */
+    border: 1px solid #ddd; /* Borde ligero */
+}
+
+.content-column h3 {
+    color: #34568B; /* Color del título */
+    margin-bottom: 10px;
+}
+
+/* Estilos opcionales para los títulos y párrafos */
+.content-column h3 {
+    background-color: #EFEFEF;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Puedes añadir estilos adicionales para personalizar aún más cada sección */
